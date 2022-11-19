@@ -1,0 +1,25 @@
+/* este é o modo que trabalhamos no CSS */
+
+p span{
+    background: red;
+}
+
+p b{
+    background: black;
+}
+
+body {
+    color: blue;
+}
+
+/*observe agora que no SASS poderemos colocar as tags que vêm em seguida de "p" dentro dele, não mais colocando ao seu lado */
+
+p {
+    span {
+        background: red;
+    }
+    
+    b {
+        background: black;
+    }
+}
