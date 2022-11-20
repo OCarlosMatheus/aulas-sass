@@ -1,0 +1,48 @@
+@mixin button-style($background, $color) {
+    background: $background;
+    color: $color;
+    &:hover {
+        background:darken($background, 10%)
+    }
+}
+
+.btn { /* .btn é nossa tag pai (principal) e todas as suas tags filhas irão herdar suas características padrões, podendo nós alterarmos estas de forma independente ao configurarmos nossas tags filhas */
+    width: 200px;
+    padding: 10px 0;
+    background: none;
+    border: 0;
+    border-radius: 10px;
+    display: block; /* deixar cada botão em uma linha */
+    margin: 10px 0;
+
+    &.btn-laranja {
+        @include button-style($color-orange, #fff );
+
+    }
+    
+    &.btn-roxo {
+        @include button-style($color-purple, #fff);
+    }
+    
+    &.btn-amarelo {
+        @include button-style($color-yellow, #000);
+    }
+
+    /* &.btn-laranja{   UTILIZAÇÃO DO NESTING - EXCLUSIVO DO SCSS - 
+        background: orange;
+    } */
+}
+
+
+/* se fosse no CSS, iríamos incluir a tag filha da seguinte forma:
+
+".btn btn-laranja {
+}" 
+
+Entretanto, no SCSS podemos utilizar o nesting e passar a configurar a nossa tag filha de dentro da tag pai, com a utilização de "&:btn-laranja { }"
+*/
+
+
+
+
+

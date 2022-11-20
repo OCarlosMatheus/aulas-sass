@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* ESTE ARQUIVO FOI CRIADO NA AULA 2 COMO "Style.scss" E MODIFICADO PARA "TESTEAULA2Style.scss", não tendo efeito nenhum em nossa "index.html"*/
+/* este é o modo que trabalhamos no CSS 
+
+p span{
+    background: red;
+}
+
+p b{
+    background: black;
+}
+
+body {
+    color: blue;
+}
+
+/*observe agora que no SASS poderemos colocar as tags que vêm em seguida de "p" dentro dele, não mais colocando ao seu lado */
+p span {
+  background: red;
+}
+p b {
+  background: black;
+}
+p:hover {
+  color: #fff;
+}
+
+/* caso quiséssemos trabalhar com o seletor "hover", teríamos no CSS que utilizar: "p:hover { }" */
+/* entretanto, poderemos incluí-lo diretamente dentro de "p {" utilizando: "&:hover" */
+
+/*# sourceMappingURL=TESTEAULA2style.css.map */

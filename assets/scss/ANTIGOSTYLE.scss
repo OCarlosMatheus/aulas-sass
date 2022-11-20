@@ -1,0 +1,34 @@
+/* ATENÇÃO: este arquivo passou de "style.scss" para "ANTIGOSTYLE.scss" na aula 5 - Variáveis e Import */
+/* A partir da aula 5, esse arquivo passa a não ter mais validade, sendo todas as duas funcionalidades transferidas para o novo "style.scss" e outras para "buttons.scss" */ 
+/* O arquivo aqui permanece para compreendermos as antigas estruturas do nosso projeto durante a construção até o produto final */ 
+
+
+.btn { /* .btn é nossa tag pai (principal) e todas as suas tags filhas irão herdar suas características padrões, podendo nós alterarmos estas de forma independente ao configurarmos nossas tags filhas */
+    width: 200px;
+    padding: 10px 0;
+    background: none;
+    border: 0;
+    border-radius: 10px;
+
+    /* &.btn-laranja{   UTILIZAÇÃO DO NESTING - EXCLUSIVO DO SCSS - 
+        background: orange;
+    } */
+}
+
+/* ------ HERANÇA PELO @EXTEND ------ */
+/* Caso não queiramos configurar nossa tag filha pelo NESTING como no exemplo acima, basta fazer: */
+
+.btn-laranja {
+    @extend .btn;
+    background: orange;
+}
+
+
+
+/* se fosse no CSS, iríamos incluir a tag filha da seguinte forma:
+
+".btn btn-laranja {
+}" 
+
+Entretanto, no SCSS podemos utilizar o nesting e passar a configurar a nossa tag filha de dentro da tag pai, com a utilização de "&:btn-laranja { }"
+*/
